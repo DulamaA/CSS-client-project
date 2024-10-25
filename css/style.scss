@@ -1,6 +1,6 @@
-@use "_normalize.scss";
-@import "mobile";
+@import "_normalize.scss";
+@import "_mobile";
 
-@media screen and (min-width: 1366px) {
-  @import "desktop";
+@media screen and (min-width: 1280px) {
+  @import "_desktop";
 }

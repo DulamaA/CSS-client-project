@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  color: white;
 }
 
 button {
@@ -80,15 +81,45 @@ ul {
   color: white;
 }
 
+$debugging: true;
+
 .page-title {
+  @if $debugging {
+    outline: 1px solid red;
+  }
+
   text-transform: uppercase;
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+  font-family: "Jockey One", sans-serif;
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .drizzle,
+  .chickpeas {
+    position: absolute;
+  }
   .drizzle {
     color: #ac77ff;
+    top: -8px;
+    right: 0;
+    font-size: 1.57rem;
   }
   .tahini {
     color: #5fff37;
+    font-size: 4rem;
   }
   .chickpeas {
     color: #f9f135;
+    left: 0;
+    bottom: -3px;
+    font-size: 1.75rem;
+    z-index: -1;
   }
 }
