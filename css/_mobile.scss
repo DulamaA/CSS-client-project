@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: black;
 }
 
 button {
@@ -78,4 +78,17 @@ ul {
   text-align: center;
   text-transform: uppercase;
   color: white;
+}
+
+.page-title {
+  text-transform: uppercase;
+  .drizzle {
+    color: #ac77ff;
+  }
+  .tahini {
+    color: #5fff37;
+  }
+  .chickpeas {
+    color: #f9f135;
+  }
 }
