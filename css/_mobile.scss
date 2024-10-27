@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
   color: white;
@@ -81,7 +85,7 @@ ul {
   color: white;
 }
 
-$debugging: true;
+$debugging: false;
 
 .page-title {
   @if $debugging {
@@ -122,4 +126,37 @@ $debugging: true;
     font-size: 1.75rem;
     z-index: -1;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-2 {
+  div {
+    border: 3px solid #f9f135;
+  }
+}
+
+.info-1 {
+  background-color: #ac77ff;
+  display: inline-block;
+  padding-inline: 5px;
+  text-transform: uppercase;
+  transform: rotate(4deg);
+}
+.info-2 {
+  background-color: #5fff37;
+  display: inline-block;
+  padding-inline: 5px;
+  text-transform: uppercase;
+  transform: rotate(-4deg);
+}
+.info-3 {
+  background-color: #f9f135;
+  display: inline-block;
+  padding-inline: 5px;
+  text-transform: uppercase;
 }
