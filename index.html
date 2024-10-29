@@ -200,22 +200,27 @@
                   <input type="text" name="allergies" />
                 </label>
                 <div class="form-buttons">
-                  <input type="reset" value="Cancel" />
-                  <input type="submit" value="Request" />
+                  <input class="cancel" type="reset" value="Cancel" />
+                  <input class="request" type="submit" value="Request" />
                 </div>
               </form>
             </div>
           </div>
+
           <div class="contact">
             <div class="restaurant-photo">
               <ul>
-                <li><i class="fa-solid fa-phone"></i> +46 8123 45 67</li>
                 <li>
-                  <i class="fa-thin fa-at"></i>
-                  <a href="mailto:book@toughcookie.com">book@toughcookie.com</a>
+                  <span class="material-symbols-outlined">call</span>
+                  +46 8123 45 67
                 </li>
                 <li>
-                  <i class="fa-solid fa-location-dot"></i> Brända Tomten <br />
+                  <span class="material-symbols-outlined">alternate_email</span>
+                  book@toughcookie.com
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">location_on</span>
+                  Brända Tomten <br />
                   111 31 Stockholm
                 </li>
               </ul>
@@ -225,7 +230,7 @@
 
         <section class="cookies">
           <span>You should accept cookies.</span>
-          <span>
+          <span class="cookies-button">
             <button class="decline-button">Decline</button>
             <button class="accept-button">Accept</button>
           </span>
