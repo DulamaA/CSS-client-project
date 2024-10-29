@@ -7,7 +7,7 @@ body {
   color: white;
 }
 
-button {
+.menu-button {
   width: 35px;
   height: 35px;
   background: transparent;
@@ -19,7 +19,7 @@ button {
   pointer-events: none;
 }
 
-button span {
+.menu-button span {
   display: block;
   width: 25px;
   height: 3px;
@@ -28,7 +28,7 @@ button span {
   margin-bottom: 4px;
 }
 
-input {
+.input-menu {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -38,20 +38,20 @@ input {
   opacity: 0;
 }
 
-input:checked + .menu button span {
+input:checked + .menu .menu-button span {
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
 
-input:checked + .menu button span:nth-child(2) {
+input:checked + .menu .menu-button span:nth-child(2) {
   opacity: 0;
 }
 
-input:checked + .menu button span:nth-child(1) {
+input:checked + .menu .menu-button span:nth-child(1) {
   transform: rotate(45deg);
 }
 
-input:checked + .menu button span:nth-child(3) {
+input:checked + .menu .menu-button span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
@@ -83,6 +83,13 @@ ul {
   text-align: center;
   text-transform: uppercase;
   color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+  position: fixed;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 $debugging: false;
@@ -128,15 +135,12 @@ $debugging: false;
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 .page-2 {
-  div {
-    border: 3px solid #f9f135;
+  border: 3px solid #f9f135;
+  .food-one img,
+  .food-two img,
+  .food-three img {
+    object-fit: cover;
   }
 }
 
@@ -159,4 +163,14 @@ img {
   display: inline-block;
   padding-inline: 5px;
   text-transform: uppercase;
+}
+
+.image {
+  &-sallad {
+    background-image: url("../assets/photos/sallad.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 80px;
+    height: auto;
+  }
 }

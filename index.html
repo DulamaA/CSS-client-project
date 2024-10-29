@@ -7,16 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="normalize.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -24,10 +24,10 @@
   <body>
     <main>
       <header>
-        <input type="checkbox" />
+        <input class="input-menu" type="checkbox" />
 
         <div class="menu">
-          <button>
+          <button class="menu-button">
             <span></span>
             <span></span>
             <span></span>
@@ -41,11 +41,7 @@
             </ul>
           </nav>
         </div>
-        <h1>
-          Tough <span class="desktop-only">&nbsp;</span> Cookie<span
-            class="desktop-only"
-          ></span>
-        </h1>
+        <h1>Tough Cookie</h1>
       </header>
 
       <div class="page-content">
@@ -60,110 +56,118 @@
             </div>
           </div>
           <div class="blooper">
-            Main course hemp seeds Southern Italian shiitake mushrooms a
-            delicious meal banana bread lemon tahini dressing apple vinaigrette
-            veggie burgers cool cucumbers coconut sugar. Seasonal edamame hummus
-            asian pear kale bite sized ghost pepper one bowl mediterranean
-            luxury bowl cayenne Thai sun pepper.
+            <b
+              >Main course hemp seeds Southern Italian shiitake mushrooms a
+              delicious meal banana bread lemon tahini dressing apple
+              vinaigrette veggie burgers cool cucumbers coconut sugar. Seasonal
+              edamame hummus asian pear kale bite sized ghost pepper one bowl
+              mediterranean luxury bowl cayenne Thai sun pepper.</b
+            >
           </div>
-          <div class="image">
-            <div class="arrow">
-              <img
-                src="icons/arrow.svg"
-                alt="Arrow pointing down"
-                width="72"
-                height="59"
-              />
-            </div>
+
+          <div class="image image-sallad">
+            <span class="material-symbols-outlined">arrow_downward</span>
           </div>
           <div class="blooper-2">
-            Crispy iceberg lettuce Caribbean red habanero blueberry chia seed
-            jam overflowing berries roasted butternut squash basmati thyme
-            hummus falafel bowl cozy butternut cilantro lime vinaigrette heat
-            mint potato chocolate cookie seeds samosa walnut mushroom tart.
-          </div>
-          <div>
-            <p>Explore Menu</p>
-            <div class="arrow-2">
-              <img
-                src="icons/arrow2.svg"
-                alt="Arrow pointing right"
-                width="72"
-                height="59"
-              />
-            </div>
+            <b
+              >Crispy iceberg lettuce Caribbean red habanero blueberry chia seed
+              jam overflowing berries roasted butternut squash basmati thyme
+              hummus falafel bowl cozy butternut cilantro lime vinaigrette heat
+              mint potato chocolate cookie seeds samosa walnut mushroom tart.</b
+            >
+            <br />
+            <span class="explore-menu"
+              ><b>Explore Menu</b
+              ><span class="material-symbols-outlined">east</span></span
+            >
           </div>
         </div>
 
         <!-- page 2 -->
 
-        <div class="page page-2">
-          <div class="image">
-            <img src="assets/photos/beans.jpg" alt="A bowl of beans" />
+        <div class="page-2">
+          <div class="food-one">
+            <img
+              src="assets/photos/beans.jpg"
+              width="350"
+              height="200"
+              alt="A bowl of beans"
+            />
           </div>
-          <div class="image">
-            <img src="assets/photos/yogurt.jpg" alt="A bowl of yogurt" />
+          <div class="food-two">
+            <img
+              src="assets/photos/yogurt.jpg"
+              width="350"
+              height="200"
+              alt="A bowl of yogurt"
+            />
           </div>
-          <div class="image">
-            <img src="assets/photos/sauce.jpg" alt="A few bowls of sauce" />
+          <div class="food-three">
+            <img
+              src="assets/photos/sauce.jpg"
+              width="350"
+              height="200"
+              alt="A few bowls of sauce"
+            />
           </div>
+
+          <ul class="food-menu">
+            <li>
+              <div class="dish-name">
+                HALLOUMI MOKLIEH <span class="info-1">New !</span>
+              </div>
+              <span class="dish-desc">Deep-fried halloumi</span>
+              <span class="dish-price">195 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">MOJADDARA</div>
+              <span class="dish-desc"
+                >Green lentis with rice and fried onion</span
+              >
+              <span class="dish-price">135 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">CHIAR & LABAN</div>
+              <span class="dish-desc"
+                >Lebanese spicy yoghurt with chopped cucumber</span
+              >
+              <span class="dish-price">95 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">WARAK INAB</div>
+              <span class="dish-desc"
+                >Rice- and veggie-filled dolma with mint and lemon</span
+              >
+              <span class="dish-price">85 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">
+                MOUTABBAL BATINZIAN<span class="info-2">Vegan</span>
+              </div>
+              <span class="dish-desc"
+                >Smoked chopped aubergine, sesame paste, garlic and lemon</span
+              >
+              <span class="dish-price">175 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">
+                ARDISHOKI <span class="info-3">Popular</span>
+              </div>
+              <span class="dish-desc"
+                >Artichoke with lemon and garlic marinade</span
+              >
+              <span class="dish-price">99 kr</span>
+            </li>
+            <li>
+              <div class="dish-name">MHAMARA</div>
+              <span class="dish-desc"
+                >Spicy bell pepper relish with crushed walnuts and pomegranate
+                syrup</span
+              >
+              <span class="dish-price">123 kr</span>
+            </li>
+          </ul>
         </div>
-        <ul class="menu">
-          <li>
-            <span class="dish-name">
-              HALLOUMI MOKLIEH <span class="info-1">New !</span>
-            </span>
-            <span class="dish-desc">Deep-fried halloumi</span>
-            <span class="dish-price">195 kr</span>
-          </li>
-          <li>
-            <span class="dish-name">MOJADDARA</span>
-            <span class="dish-desc"
-              >Green lentis with rice and fried onion</span
-            >
-            <span class="dish-price">135 kr</span>
-          </li>
-          <li>
-            <span class="dish-name">CHIAR & LABAN</span>
-            <span class="dish-desc"
-              >Lebanese spicy yoghurt with chopped cucumber</span
-            >
-            <span class="dish-price">95 kr</span>
-          </li>
-          <li>
-            <span class="dish-name">WARAK INAB</span>
-            <span class="dish-desc"
-              >Rice- and veggie-filled dolma with mint and lemon</span
-            >
-            <span class="dish-price">85 kr</span>
-          </li>
-          <li>
-            <span class="dish-name"
-              >MOUTABBAL BATINZIAN<span class="info-2">Vegan</span>
-            </span>
-            <span class="dish-desc"
-              >Smoked chopped aubergine, sesame paste, garlic and lemon</span
-            >
-            <span class="dish-price">175 kr</span>
-          </li>
-          <li>
-            <span class="dish-name"
-              >ARDISHOKI <span class="info-3">Popular</span>
-            </span>
-            <span class="dish-desc"
-              >Artichoke with lemon and garlic marinade</span
-            >
-            <span class="dish-price">99 kr</span>
-          </li>
-          <li>
-            <span class="dish-name">MHAMARA</span>
-            <span class="dish-desc"
-              >Spicy bell pepper relish with crushed walnuts and pomegranate
-              syrup</span
-            >
-            <span class="dish-price">123 kr</span>
-          </li>
-        </ul>
 
         <!-- page 3 -->
         <div class="page page-3">
@@ -201,8 +205,9 @@
                 </div>
               </form>
             </div>
-
-            <div class="contact">
+          </div>
+          <div class="contact">
+            <div class="restaurant-photo">
               <ul>
                 <li><i class="fa-solid fa-phone"></i> +46 8123 45 67</li>
                 <li>
@@ -218,13 +223,13 @@
           </div>
         </div>
 
-        <div class="cookies">
-          <div>You should accept cookies.</div>
-          <div>
-            <button>Decline</button>
-            <button>Accept</button>
-          </div>
-        </div>
+        <section class="cookies">
+          <span>You should accept cookies.</span>
+          <span>
+            <button class="decline-button">Decline</button>
+            <button class="accept-button">Accept</button>
+          </span>
+        </section>
       </div>
     </main>
   </body>
