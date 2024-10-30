@@ -65,6 +65,7 @@ nav {
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
+  z-index: -1;
 }
 
 input:checked + .menu nav {
@@ -90,6 +91,8 @@ h1 {
   position: fixed;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  margin-top: 70px;
+  margin-left: 1rem;
 }
 
 $debugging: false;
@@ -135,11 +138,23 @@ $debugging: false;
   }
 }
 
+.page-1,
+.page-2 {
+  border-left: 8px solid #f9f135;
+  border-right: 8px solid #f9f135;
+}
+.page-3 {
+  border-left: 8px solid #fff;
+  border-right: 8px solid #fff;
+}
+
 .page-2 {
   border: 3px solid #f9f135;
   .food-one img,
   .food-two img,
   .food-three img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }

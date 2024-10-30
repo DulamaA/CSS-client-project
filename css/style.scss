@@ -5,3 +5,7 @@
 @media screen and (min-width: 1366px) {
   @import "_desktop";
 }
+
+@media screen and (max-width: 1365px) {
+  @import "mobile_only";
+}
