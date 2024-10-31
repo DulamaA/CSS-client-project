@@ -4,7 +4,6 @@
 
 body {
   background-color: black;
-  color: white;
 }
 
 .menu-button {
@@ -84,6 +83,7 @@ ul {
   text-align: center;
   text-transform: uppercase;
   color: white;
+  font-weight: bold;
 }
 
 h1 {
@@ -97,312 +97,316 @@ h1 {
 
 $debugging: false;
 
-.page-title {
-  @if $debugging {
-    outline: 1px solid red;
-  }
+.page-content {
+  margin-left: 4vw;
 
-  text-transform: uppercase;
-  position: relative;
-  min-width: 300px;
-  min-height: 300px;
-  font-family: "Jockey One", sans-serif;
+  .page-title {
+    @if $debugging {
+      outline: 1px solid red;
+    }
 
-  div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .drizzle,
-  .chickpeas {
-    position: absolute;
-  }
-  .drizzle {
-    color: #ac77ff;
-    top: -8px;
-    right: 0;
-    font-size: 1.57rem;
-  }
-  .tahini {
-    color: #5fff37;
-    font-size: 4rem;
-  }
-  .chickpeas {
-    color: #f9f135;
-    left: 0;
-    bottom: -3px;
-    font-size: 1.75rem;
-    z-index: -1;
-  }
-}
-
-.page-1,
-.page-2 {
-  border-left: 8px solid #f9f135;
-  border-right: 8px solid #f9f135;
-}
-
-.page-1 {
-  .tahini {
-    grid-column: 1 / span 12;
-  }
-  .blooper {
-    color: #00ff39;
-    font-size: 1.5rem;
-    grid-column: 1 / span 12;
-  }
-  .image {
-    grid-column: 1 / span 12;
-
+    text-transform: uppercase;
     position: relative;
-    &:hover {
-      .arrow {
-        bottom: 8px;
-      }
-    }
-    &-sallad {
-      background-image: url("../assets/photos/sallad.jpg");
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      height: 250px;
-    }
+    min-width: 300px;
+    min-height: 300px;
+    font-family: "Jockey One", sans-serif;
 
-    .material-symbols-outlined {
+    div {
       position: absolute;
-      font-size: 2.5rem;
-      transform: rotate(0deg);
-      bottom: 4px;
-      left: 4px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .drizzle,
+    .chickpeas {
+      position: absolute;
+    }
+    .drizzle {
+      color: #ac77ff;
+      top: -8px;
+      right: 0;
+      font-size: 1.57rem;
+    }
+    .tahini {
+      color: #5fff37;
+      font-size: 4rem;
+    }
+    .chickpeas {
+      color: #f9f135;
+      left: 0;
+      bottom: -3px;
+      font-size: 1.75rem;
+      z-index: -1;
     }
   }
-  .blooper-2 {
-    grid-column: 1 / span 12;
-    font-size: 1.5rem;
-    background-color: white;
-    color: #ab77fe;
+
+  .page-1,
+  .page-2 {
     border-left: 8px solid #f9f135;
+    border-right: 8px solid #f9f135;
+  }
 
-    .explore-menu {
-      margin-top: 8px;
-      color: black;
-      text-transform: uppercase;
+  .page-1 {
+    .tahini {
+      grid-column: 1 / span 12;
     }
-  }
-}
-
-.page-2 {
-  border: 3px solid #f9f135;
-
-  .food-one img,
-  .food-two img,
-  .food-three img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .food-one,
-  .food-two,
-  .food-three {
-    grid-column: 1 / span 12;
-    height: 200px;
-  }
-
-  .food-menu {
-    grid-column: 1 / span 12;
-    padding: 0;
-    list-style: 0;
-    margin: 0;
-  }
-  li {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 16px;
-    background-color: #fff;
-    color: #000;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    margin-bottom: 8px;
-  }
-
-  .dish-name,
-  .dish-desc,
-  .dish-price {
-    grid-column: 1 / span 12;
-    text-align: left;
-  }
-
-  .dish-price {
-    text-align: left;
-    padding-top: 8px;
-  }
-}
-
-.page-3 {
-  border-left: 8px solid #fff;
-  border-right: 8px solid #fff;
-
-  border-left: none;
-  border-right: none;
-
-  grid-template-columns: 1fr;
-  background-color: #5fff37;
-  color: black;
-
-  .book,
-  .contact {
-    grid-column: 1 / span 12;
-    padding-left: 0;
-  }
-
-  .book {
-    h2 {
+    .blooper {
+      color: #00ff39;
       font-size: 1.5rem;
-      text-transform: uppercase;
+      grid-column: 1 / span 12;
+    }
+    .image {
+      grid-column: 1 / span 12;
+
+      position: relative;
+      &:hover {
+        .arrow {
+          bottom: 8px;
+        }
+      }
+      &-sallad {
+        background-image: url("../assets/photos/sallad.jpg");
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 250px;
+      }
+
+      .material-symbols-outlined {
+        position: absolute;
+        font-size: 2.5rem;
+        transform: rotate(0deg);
+        bottom: 4px;
+        left: 4px;
+      }
+    }
+    .blooper-2 {
+      grid-column: 1 / span 12;
+      font-size: 1.5rem;
+      background-color: white;
+      color: #ab77fe;
+      border-left: 8px solid #f9f135;
+
+      .explore-menu {
+        margin-top: 8px;
+        color: black;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .page-2 {
+    background-color: #f9f135;
+    border: 3px solid #f9f135;
+
+    .food-one img,
+    .food-two img,
+    .food-three img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding-top: 10px;
+    }
+    .food-one,
+    .food-two,
+    .food-three {
+      grid-column: 1 / span 12;
+      height: 200px;
     }
 
-    .form {
-      form {
-        margin: 0 auto;
-      }
+    .food-menu {
+      grid-column: 1 / span 12;
+      padding: 0;
+      list-style: 0;
+      margin: 0;
+    }
+    li {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      background-color: #fff;
+      color: #000;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      margin-bottom: 8px;
+    }
 
-      label {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      span {
-        flex: 1;
+    .dish-name,
+    .dish-desc,
+    .dish-price {
+      grid-column: 1 / span 12;
+      text-align: left;
+    }
+
+    .dish-price {
+      text-align: left;
+      padding-top: 8px;
+    }
+  }
+
+  .page-3 {
+    border-left: 8px solid #fff;
+    border-right: 8px solid #fff;
+
+    border-left: none;
+    border-right: none;
+
+    grid-template-columns: 1fr;
+    background-color: #5fff37;
+    color: black;
+
+    .book,
+    .contact {
+      grid-column: 1 / span 12;
+      padding-left: 0;
+    }
+
+    .book {
+      h2 {
+        font-size: 1.5rem;
         text-transform: uppercase;
-        font-weight: bold;
       }
 
-      input {
-        width: 100%;
-        margin-top: 8px;
-        border-radius: 12px;
-      }
+      .form {
+        form {
+          margin: 0 auto;
+        }
 
-      .form-buttons {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        justify-content: space-between;
-        .cancel,
-        .request {
+        label {
+          align-items: flex-start;
+        }
+        span {
           flex: 1;
-          padding: 10px;
+          text-transform: uppercase;
           font-weight: bold;
+        }
 
-          &.cancel {
-            background-color: #b56be4;
-          }
-          &.request {
-            background-color: #ffd832;
+        input {
+          width: 100%;
+          margin-top: 8px;
+          border-radius: 12px;
+        }
+
+        .form-buttons {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: space-between;
+          .cancel,
+          .request {
+            flex: 1;
+            padding: 10px;
+            font-weight: bold;
+
+            &.cancel {
+              background-color: #b56be4;
+            }
+            &.request {
+              background-color: #ffd832;
+            }
           }
         }
       }
     }
+
+    .contact {
+      p {
+        font-size: 1rem;
+        color: #3da1ca;
+      }
+
+      .restaurant-photo {
+        background-image: url("/assets/photos/restaurant.jpg");
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        margin-left: 0;
+      }
+      .blurred-background {
+        background-image: url("/assets/photos/restaurant.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(2px);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .overlay-text {
+        position: relative;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        margin-top: 50px;
+        font-size: 1rem;
+        z-index: 2;
+      }
+    }
   }
 
-  .contact {
-    p {
-      font-size: 1rem;
-      color: #3da1ca;
-    }
-
-    .restaurant-photo {
-      background-image: url("/assets/photos/restaurant.jpg");
-      background-size: cover;
-      background-position: center center;
-      position: relative;
-      width: 100%;
-      height: 250px;
-      margin-left: 0;
-    }
-    .blurred-background {
-      background-image: url("/assets/photos/restaurant.jpg");
-      background-size: cover;
-      background-position: center;
-      filter: blur(2px);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .overlay-text {
-      position: relative;
-      text-align: center;
-      font-weight: bold;
-      padding: 10px;
-      margin-top: 50px;
-      font-size: 1rem;
-      z-index: 2;
-    }
+  .info-1 {
+    background-color: #ac77ff;
+    display: inline-block;
+    padding-inline: 5px;
+    text-transform: uppercase;
+    transform: rotate(4deg);
   }
-}
+  .info-2 {
+    background-color: #5fff37;
+    display: inline-block;
+    padding-inline: 5px;
+    text-transform: uppercase;
+    transform: rotate(-4deg);
+  }
+  .info-3 {
+    background-color: #f9f135;
+    display: inline-block;
+    padding-inline: 5px;
+    text-transform: uppercase;
+  }
 
-.info-1 {
-  background-color: #ac77ff;
-  display: inline-block;
-  padding-inline: 5px;
-  text-transform: uppercase;
-  transform: rotate(4deg);
-}
-.info-2 {
-  background-color: #5fff37;
-  display: inline-block;
-  padding-inline: 5px;
-  text-transform: uppercase;
-  transform: rotate(-4deg);
-}
-.info-3 {
-  background-color: #f9f135;
-  display: inline-block;
-  padding-inline: 5px;
-  text-transform: uppercase;
-}
+  .cookies {
+    background-color: #ac77ff;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 8px;
+    padding-block: 16px;
+  }
+  .cookies-text {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .cookies-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+  .cookies-button {
+    font-family: "Jockey One", sans-serif;
+    margin-right: 15%;
+  }
 
-.cookies {
-  background-color: #ac77ff;
-  position: fixed;
-  z-index: 2;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 8px;
-  padding-block: 16px;
-}
-.cookies-text {
-  text-align: center;
-  margin-bottom: 8px;
-}
-.cookies-button-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-}
-.cookies-button {
-  font-family: "Jockey One", sans-serif;
-  margin-right: 15%;
-}
+  .decline-button {
+    background-color: #f9f135;
+    text-transform: uppercase;
+    border-radius: 12px;
+  }
 
-.decline-button {
-  background-color: #f9f135;
-  text-transform: uppercase;
-  border-radius: 12px;
-}
-
-.accept-button {
-  background-color: #00ff39;
-  text-transform: uppercase;
-  border-radius: 12px;
+  .accept-button {
+    background-color: #00ff39;
+    text-transform: uppercase;
+    border-radius: 12px;
+  }
 }
