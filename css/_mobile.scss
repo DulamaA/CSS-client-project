@@ -86,13 +86,27 @@ ul {
   font-weight: bold;
 }
 
-h1 {
-  text-transform: uppercase;
+header {
+  background-color: black;
+  width: 4vw;
   position: fixed;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  margin-top: 70px;
-  margin-left: 1rem;
+  height: 60px;
+  z-index: 999;
+
+  h1 {
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    width: 27px;
+    margin-top: 4rem;
+    left: 0;
+    word-break: normal;
+
+    span.desktop-only {
+      display: none;
+    }
+  }
 }
 
 $debugging: false;
@@ -248,9 +262,6 @@ $debugging: false;
   .page-3 {
     border-left: 8px solid #fff;
     border-right: 8px solid #fff;
-
-    border-left: none;
-    border-right: none;
 
     grid-template-columns: 1fr;
     background-color: #5fff37;
