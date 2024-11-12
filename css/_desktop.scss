@@ -201,7 +201,8 @@ header {
       }
 
       .restaurant-photo {
-        background-image: url("./assets/photos/restaurant.jpg");
+        background-image: url("/assets/photos/restaurant.jpg");
+        // assets\photos\restaurant.jpg
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -213,7 +214,7 @@ header {
       }
 
       .blurred-background {
-        background-image: url("./assets/photos/restaurant.jpg");
+        background-image: url("/assets/photos/restaurant.jpg");
         background-size: cover;
         background-position: center;
         filter: blur(2px);

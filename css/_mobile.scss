@@ -30,7 +30,7 @@ body {
 
 .input-menu {
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 20px;
   z-index: 1;
   width: 35px;
@@ -331,7 +331,7 @@ $debugging: false;
       }
 
       .restaurant-photo {
-        background-image: url("./assets/photos/restaurant.jpg");
+        background-image: url("/assets/photos/restaurant.jpg");
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -340,7 +340,7 @@ $debugging: false;
         margin-left: 0;
       }
       .blurred-background {
-        background-image: url("./assets/photos/restaurant.jpg");
+        background-image: url("/assets/photos/restaurant.jpg");
         background-size: cover;
         background-position: center;
         filter: blur(2px);
