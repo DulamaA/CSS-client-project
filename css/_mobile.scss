@@ -11,11 +11,12 @@ body {
   height: 35px;
   background: transparent;
   border: 0;
-  position: fixed;
+  position: absolute;
   left: 20px;
-  top: 20px;
-  z-index: 2;
+  top: 10px;
+  z-index: 10;
   pointer-events: none;
+  outline: 2px solid blue;
 }
 
 .menu-button span {
@@ -64,7 +65,7 @@ nav {
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
-  z-index: -1;
+  z-index: 999;
 }
 
 input:checked + .menu nav {
@@ -90,8 +91,9 @@ header {
   background-color: black;
   width: 4vw;
   position: fixed;
-  height: 60px;
+  height: 100vh;
   z-index: 999;
+  outline: 2px solid red;
 
   h1 {
     text-transform: uppercase;
@@ -102,6 +104,7 @@ header {
     margin-top: 4rem;
     left: 0;
     word-break: normal;
+    outline: 2px solid blueviolet;
 
     span.desktop-only {
       display: none;
@@ -328,7 +331,7 @@ $debugging: false;
       }
 
       .restaurant-photo {
-        background-image: url("/assets/photos/restaurant.jpg");
+        background-image: url("./assets/photos/restaurant.jpg");
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -337,7 +340,7 @@ $debugging: false;
         margin-left: 0;
       }
       .blurred-background {
-        background-image: url("/assets/photos/restaurant.jpg");
+        background-image: url("./assets/photos/restaurant.jpg");
         background-size: cover;
         background-position: center;
         filter: blur(2px);
