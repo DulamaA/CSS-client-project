@@ -4,19 +4,49 @@
 
 body {
   background-color: black;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.input-menu {
+  display: none;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 4vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1003;
+}
+
+header h1 {
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-top: 1rem;
 }
 
 .menu-button {
   width: 35px;
   height: 35px;
   background: transparent;
-  border: 0;
+  border: none;
   position: absolute;
-  left: -10px;
-  top: 20px;
-  z-index: 2;
-
-  outline: 2px solid blue;
+  left: 10px;
+  top: 10px;
+  z-index: 1004;
+  cursor: pointer;
 }
 
 .menu-button span {
@@ -24,92 +54,59 @@ body {
   width: 25px;
   height: 3px;
   background-color: #efe233;
-  border-radius: 6px;
-  margin-bottom: 4px;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+span.desktop-only {
+  display: none;
+}
+.input-menu:checked + .menu-button span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.input-menu {
-  position: fixed;
-  left: -10px;
-  top: 20px;
-  z-index: 2;
-  width: 35px;
-  height: 35px;
+.input-menu:checked + .menu-button span:nth-child(2) {
   opacity: 0;
 }
 
-input:checked + .menu .menu-button span {
-  position: absolute;
-  transition: all 0.3s ease-in-out;
+.input-menu:checked + .menu-button span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-input:checked + .menu .menu-button span:nth-child(2) {
-  opacity: 0;
-}
-
-input:checked + .menu .menu-button span:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-input:checked + .menu .menu-button span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-
-nav {
+.menu nav {
   position: fixed;
   top: 0;
   left: 0;
   background-color: hsl(263, 100%, 73%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
-  z-index: 1;
+  z-index: 1001;
 }
 
-input:checked + .menu nav {
+.input-menu:checked + .menu nav {
   visibility: visible;
   opacity: 1;
 }
 
-ul {
+.menu nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-evenly;
+  text-align: center;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
 }
-
-header {
-  background-color: grey;
-  color: white;
-  width: 4vw;
-  position: fixed;
-  height: 100vh;
-  z-index: 1;
-
-  h1 {
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    margin: 0;
-    width: 25px;
-    margin-top: 6rem;
-    left: 0;
-    word-break: normal;
-    outline: 2px solid blueviolet;
-
-    span.desktop-only {
-      display: none;
-    }
-  }
+.menu nav ul li {
+  margin: 20px 0;
 }
 
 $debugging: false;
@@ -119,7 +116,6 @@ $debugging: false;
 
   .page-title {
     @if $debugging {
-      outline: 1px solid red;
     }
 
     text-transform: uppercase;
