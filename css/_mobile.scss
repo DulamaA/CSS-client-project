@@ -12,8 +12,8 @@ body {
   background: transparent;
   border: 0;
   position: absolute;
-  left: 20px;
-  top: 10px;
+  left: -10px;
+  top: 20px;
   z-index: 10;
   pointer-events: none;
   outline: 2px solid blue;
@@ -89,19 +89,18 @@ ul {
 
 header {
   background-color: grey;
-  width: 8vw;
+  color: white;
+  width: 4vw;
   position: fixed;
   height: 100vh;
-  z-index: 999;
-  outline: 2px solid red;
 
   h1 {
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: upright;
-
-    width: 27px;
-    margin-top: 4rem;
+    margin: 0;
+    width: 25px;
+    margin-top: 6rem;
     left: 0;
     word-break: normal;
     outline: 2px solid blueviolet;
