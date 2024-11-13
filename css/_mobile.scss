@@ -88,8 +88,8 @@ ul {
 }
 
 header {
-  background-color: black;
-  width: 4vw;
+  background-color: grey;
+  width: 8vw;
   position: fixed;
   height: 100vh;
   z-index: 999;
@@ -99,7 +99,7 @@ header {
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    margin: 0;
+
     width: 27px;
     margin-top: 4rem;
     left: 0;
