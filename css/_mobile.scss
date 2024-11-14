@@ -97,7 +97,7 @@ span.desktop-only {
   z-index: 1000;
 }
 
-.input-menu:checked + .menu nav {
+.input-menu:checked ~ .menu nav {
   visibility: visible;
   opacity: 1;
 }
